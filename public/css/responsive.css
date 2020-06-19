@@ -1,0 +1,324 @@
+@media screen and (max-width: 320px) {
+    .home-social {
+        font-size: 10px !important;
+    }
+    #picAbout {
+        padding: 10px !important;
+    }
+    .col-5 {
+        width: 100% !important;
+    }
+    .copyright p {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 430px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav .nava li a {
+        font-size: 18px;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    /* Admin */
+    .main-content1 {
+        margin: 0px !important;
+        padding-bottom: 50px;
+    }
+    .home-content__main p {
+        visibility: hidden;
+    }
+    .smoothscroll h5 {
+        visibility: hidden !important;
+    }
+    .editAlbum {
+        padding: 20px;
+    }
+    .adminMain {
+        width: 100% !important;
+    }
+    .memd {
+        width: 100% !important;
+    }
+
+    .divEditAl {
+        width: 100%;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-bottom: 5%;
+    }
+    .uploadOpcija {
+        width: 100% !important;
+    }
+    .uploadFift {
+        max-width: 100% !important;
+    }
+    .divEditAlbum {
+        padding: 0%;
+        margin-bottom: 15%;
+    }
+
+    /* KRAJ ADMINA
+ */
+    .brojMob #piid {
+        visibility: hidden;
+    }
+    .dx {
+        margin-bottom: 30px;
+    }
+    .dx button {
+        height: 50px;
+    }
+    .fa-times {
+        display: none !important;
+    }
+    .modal-dialog {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: calc(100% - (0.5rem * 2));
+    }
+    .menu-wrap .menu > div > div > ul > li > a {
+        font-size: 25px;
+    }
+    .menu-wrap .toggler:checked ~ .menu {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        opacity: 0.95;
+    }
+    .menu-wrap .menu > div > div > ul > li > a {
+        font-size: 25px;
+    }
+    .menu-wrap .toggler:checked ~ .menu {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        opacity: 0.95;
+    }
+    #myBtnContainer {
+        display: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        visibility: hidden;
+        width: 100vw;
+    }
+    #myBtnContainer button {
+        margin: auto !important;
+    }
+    .img-window img {
+        max-width: 88vw;
+    }
+
+    #duration p {
+        font-size: 10px;
+    }
+    .ikonica {
+        left: calc(50% - 35px);
+    }
+
+    .home-social {
+        font-size: 14px;
+        bottom: 0.6rem;
+        left: 50% !important;
+        transform: translate(-42%, 25%);
+    }
+
+    .footerTxt p {
+        font-size: 8px;
+        margin-bottom: 0px !important;
+    }
+    .footerTxt {
+        padding: 0px;
+    }
+    .overlay {
+        padding: 5px;
+        height: auto;
+    }
+    .overlay h4 {
+        font-size: 22px !important;
+    }
+    .overlay .headOver {
+        font-size: 22px !important;
+    }
+    .overlay .bodyOver {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .mediaDiv {
+        height: 40vh !important;
+    }
+    .mediaDivV {
+        height: 40vh !important;
+    }
+    .glavniR {
+        flex-direction: column !important;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+
+    .col-md-5 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .myMain {
+        padding-top: 35%;
+    }
+    #picAbout {
+        width: 100%;
+        height: 180;
+    }
+    .modal {
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-footer {
+        height: auto;
+        padding: 3px !important;
+    }
+
+    .modal-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav .nava li a {
+        font-size: 16px;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #myBtnContainer {
+        padding-bottom: 10px !important;
+        padding-top: 20px;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 880px) {
+    .img-window img {
+        max-width: 90vw;
+    }
+    .naslov h1 {
+        font-size: 2.5rem;
+    }
+
+    .naslov h3 {
+        font-size: 28px;
+    }
+
+    .home-social {
+        font-size: 14px;
+        bottom: 0.6rem;
+        left: 0;
+    }
+
+    .footerTxt p {
+        font-size: 8px;
+        margin-bottom: 0px !important;
+    }
+    .footerTxt {
+        padding: 0px;
+    }
+    .overlay {
+        padding: 5px;
+        height: auto;
+    }
+    .overlay h4 {
+        font-size: 22px !important;
+    }
+
+    .overlay .bodyOver {
+        font-size: 13px !important;
+    }
+
+    .col-md-5 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .myMain {
+        padding-top: 15%;
+    }
+
+    .modal {
+        position: fixed;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-footer {
+        height: auto;
+        padding: 3px !important;
+    }
+    .modal-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        overflow: auto;
+    }
+    .modal-dialog {
+        transform: translate(0%, 0%) !important;
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav .nava li a {
+        font-size: 16px;
+    }
+    .uploadPDiv {
+        width: 70% !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1960px) {
+    .naslov h1 + p {
+        font-size: 2.5rem;
+    }
+    .naslov h1 {
+        font-size: 4rem;
+    }
+    .home-social {
+        list-style: none;
+        font-size: 22px;
+    }
+    .myLogo p {
+        font-size: 22px;
+    }
+    .myLogoSvg {
+        width: 90px;
+        height: 45px;
+    }
+    .menu-wrap .menu > div > div > ul > li > a {
+        padding: 15px 30px 13px 0px;
+        font-size: 26px;
+    }
+    .menu-wrap .menu > div {
+        padding-top: 40%;
+    }
+}
