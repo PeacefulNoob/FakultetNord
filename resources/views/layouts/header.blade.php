@@ -20,7 +20,7 @@
         <div>
           <ul style="text-align: right;">
             <li> <a href="/" class="menu__link"><i class="fa fa-fw fa-home"></i>Home</a></li>
-            <li> <a href="/blog" class="menu__link"><i class="fa fa-fw fa-blog"></i>Blog</a></li>
+            <li> <a href="/posts" class="menu__link"><i class="fa fa-newspaper-o"></i>Blog</a></li>
 
             <li><a href="/about" class="menu__link"><i class="fa fa-info-circle"></i>About</a></li>
             <li> <a href="/contact" class="menu__link"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>

@@ -16,7 +16,7 @@
 
           <div class="row justify-content-center">
             <div class="col-md-10" style="padding:1%">
-              <h3 class="text-white mb-4" style="padding-bottom:5%" style="text-align:center">Contact us</h3>
+              <h3 class=" mb-4" style="padding-bottom:5%" style="text-align:center">Contact us</h3>
 
 
               <div class="row justify-content-center">
@@ -29,31 +29,31 @@
 
                     <div class="row form-group justify-content-between">
                       <div class="col-5">
-                        <label class="text-white" for="fname">First Name</label>
-                        <input type="text" name="fname" id="fname" class="form-control" style="background-color: white; color:black">
+                        <label class="" for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" class="form-control" >
                       </div>
                       <div class="col-5">
-                        <label class="text-white" for="lname">Last Name</label>
-                        <input type="text" name="lname" id="lname" class="form-control" style="background-color: white; color:black">
+                        <label class="" for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" class="form-control" >
                       </div>
                     </div>
 
                     <div class="row form-group justify-content-between">
 
                       <div class="col-5">
-                        <label class="text-white" for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" style="background-color: white; color:black">
+                        <label class="" for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" >
                       </div>
                       <div class="col-5">
-                        <label class="text-white" for="email">What to record ?</label>
-                        <input type="text" name="record" id="film" class="form-control" style="background-color: white; color:black">
+                        <label class="" for="email">What to record ?</label>
+                        <input type="text" name="record" id="film" class="form-control" >
                       </div>
                     </div>
 
                     <div class="row form-group mb-5">
                       <div class="col-md-12">
-                        <label class="text-white" for="message">Message</label>
-                        <textarea name="message" style="background-color: white; color:black" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                        <label class="" for="message">Message</label>
+                        <textarea name="message"  id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
                       </div>
                     </div>
                     <div class="row form-group mb-5">
@@ -65,7 +65,7 @@
 
                     <div class="row form-group">
                       <div class="col-md-12" style="text-align:center">
-                        <input type="submit" id="sendMessage" value="Send Message" class="btn btn-primary btn-md text-white">
+                        <input type="submit" id="sendMessage" value="Send Message" class="btn btn-primary btn-md ">
                       </div>
                     </div>
 

@@ -3,8 +3,8 @@ body {
     line-height: 1.7;
     font-weight: 400;
     font-size: 1rem;
-    background-color: #1d2733;
-}
+/*     background-color: #1d2733;
+ */}
 
 ::-moz-selection {
     background: #000;
@@ -862,7 +862,6 @@ h5,
 
 .main-content {
     width: 100%;
-    padding-bottom: 7px;
 }
 @media (max-width: 991.98px) {
     .main-content {

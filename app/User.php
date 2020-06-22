@@ -41,5 +41,7 @@ class User extends Authenticatable
     public function isAdmin(){
         return $this->admin;
     }
-    
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

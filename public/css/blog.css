@@ -3,6 +3,7 @@
     box-shadow: 0 1.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
     background-color: #3e3b3c;
+    top: 50px !important;
 }
 
 .well {
@@ -36,4 +37,32 @@
     width: 80%;
     margin: auto;
     margin-bottom: 14%;
+}
+
+.adminNav {
+    background-color: #394d66;
+}
+
+.menu-wrap {
+    top: 7% !important;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.nav-item a {
+    color: white;
+}
+.nav-item a:hover {
+    color: #3e3b3c;
+}
+
+.commB {
+    background-color: #134284;
+}
+.menu-wrap .menu {
+
+    height: 100%;
 }

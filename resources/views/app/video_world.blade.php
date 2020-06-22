@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('video_world.css')
-<link rel="stylesheet" href="/css/video_world.css">
+<link rel="stylesheet" href="/css/other_pages.css">
 
 @endsection
 @section('content')

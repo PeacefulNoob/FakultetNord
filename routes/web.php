@@ -11,25 +11,22 @@
 |
 */
 
-Route::get('/', 'PhotoController@index');
 
 Route::get('/about', function () {
     return view('app.about');
 });
+
 Route::get('/contact', "ContactMessageController@create");
-Route::get('/blog', "PagesController@index");
-Route::get('/services', "PagesController@services");
-
-
 Route::post('Invoice', [
     'uses' => 'ContactMessageController@store',
     'as' => 'contact.store'
 ]);
-
+Route::get('/', 'PhotoController@index');
 Route::post('/views', "PhotoController@views");
 Route::get('/video_world', "PhotoController@video_world");
-Route::get('/galeries', "GalleryController@index2");
 Route::get('/app/gallery_media/{id}', 'PhotoController@index1');
+
+Route::get('/galeries', "GalleryController@index2");
 
 
 Auth::routes();
@@ -60,3 +57,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     Route::get('/albums/{id}', 'GalleryController@show');
     Route::post('/create', 'GalleryController@store');
 });
+
+Route::resource('posts', 'PostsController');
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/services', "PagesController@services");
+Route::post('/posts/{post}/comments' , 'CommentController@store');

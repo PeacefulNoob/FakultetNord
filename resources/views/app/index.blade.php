@@ -20,7 +20,7 @@
 
             </h3>
           </div>
-          <p> {{$site->description}}
+          <p class="textUvod"> {{$site->description}}
           </p></br>
         </div>
       </div>

@@ -15,7 +15,7 @@
     <div class="site-mobile-menu-body"></div>
   </div>
 
-  <main class="myMain" style="color:white;">
+  <main class="myMain" >
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-md-9">

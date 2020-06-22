@@ -16,14 +16,14 @@ padding: 20px;
 ">
                     @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" style="background-color: white; color:black" name="title" value="{{$data->title}}" id="title" required>
+                        <input type="text" class="form-control" style=" color:white" name="title" value="{{$data->title}}" id="title" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
+                        <textarea class="form-control" style=" color:white" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
                     </div>
 
                     <div class="form-group text-white">
-                        <label style="color:white"> Select Media to upload:</label>
+                        <label > Select Media to upload:</label>
                         <input type="file" name="cover_image" id="cover_image">
                         <div class="invalid-feedback">
                             Please choose a file.

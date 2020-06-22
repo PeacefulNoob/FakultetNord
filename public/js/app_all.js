@@ -1,4 +1,6 @@
-AOS.init({ offset: 120 });
+AOS.init({
+    offset: 120
+});
 
 //PRIKAZ SLIKE NA KLIK
 let galleryImages = document.querySelectorAll(".glry-img");
@@ -24,7 +26,9 @@ function changeIt(img) {
         },
         method: "post",
         url: "/views",
-        data: { id: id },
+        data: {
+            id: id
+        },
         dataType: "JSON",
 
         success: function (data) {
@@ -65,7 +69,9 @@ $("#modal1").on("show.bs.modal", function (e) {
         },
         method: "post",
         url: "/views",
-        data: { id: indexx },
+        data: {
+            id: indexx
+        },
         dataType: "JSON",
 
         success: function (data) {
@@ -109,6 +115,7 @@ const myLazyLoad = new LazyLoad({
 
 //FILTER ALBUMA
 filterSelection("all");
+
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("mojCol");
@@ -118,6 +125,7 @@ function filterSelection(c) {
         if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
     }
 }
+
 function addClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -128,6 +136,7 @@ function addClass(element, name) {
         }
     }
 }
+
 function removeClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -139,37 +148,7 @@ function removeClass(element, name) {
     }
     element.className = arr1.join(" ");
 }
-/* var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-} */
-/* 
-$(".btn").click(function() {
-  AOS.refresh();
-}); 
- */
 
-/* $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-      next=$(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});
- */
 
 $(document).ready(function () {
     $(".cat").click(function () {
@@ -191,8 +170,7 @@ $(document).ready(function () {
 
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-                {
+            $("html, body").animate({
                     scrollTop: $(hash).offset().top,
                 },
                 800,
@@ -209,14 +187,18 @@ $(document).ready(function () {
 
 /*----------------- SMOOTH SECTION SCROLL -----------------*/
 $(".ToTop").on("click", function (e) {
-    $("html, body").animate({ scrollTop: 0 }, 800);
+    $("html, body").animate({
+        scrollTop: 0
+    }, 800);
     $(".nav-link").removeClass("current");
     $(".home").addClass("current");
     return false;
 });
 
 $(".scrollToTop").on("click", function (e) {
-    $("html, body").animate({ scrollTop: 0 }, 800);
+    $("html, body").animate({
+        scrollTop: 0
+    }, 800);
     return false;
 });
 $(window).on("scroll", function (e) {
@@ -227,9 +209,23 @@ $(window).on("scroll", function (e) {
     }
 });
 $(window).on("scroll", function (e) {
-    if ($(this).scrollTop() > parseInt(15)) {
+    if ($(this).scrollTop() > parseInt(50)) {
+        $(".textUvod").fadeOut();
+    } else {
         $(".textUvod").fadeIn();
     }
 });
+$(window).on("scroll", function (e) {
+    if ($(this).scrollTop() < parseInt(100)) {
+        $(".hamburger div").css({
+            background: "white"
+        });
+    } else {
+        $(".hamburger div").css({
+            background: "black"
+        });
+    }
+});
+
 
 ///////////////////////////////////////
