@@ -719,17 +719,12 @@ hr.hr-short {
 }
 
 .memd {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
 .uploadFift {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 41.66667%;
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
-    position: relative;
-    width: 100%;
+    width: 60%;
 }
 
 .uploadPDiv {

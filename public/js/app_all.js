@@ -208,13 +208,13 @@ $(window).on("scroll", function (e) {
         $(".scrollToTop").fadeIn();
     }
 });
-$(window).on("scroll", function (e) {
+/* $(window).on("scroll", function (e) {
     if ($(this).scrollTop() > parseInt(50)) {
         $(".textUvod").fadeOut();
     } else {
         $(".textUvod").fadeIn();
     }
-});
+}); */
 $(window).on("scroll", function (e) {
     if ($(this).scrollTop() < parseInt(100)) {
         $(".hamburger div").css({

@@ -79,7 +79,6 @@ class SiteController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'url' => 'required',
             'photo' => 'mimes:mp4,mov,ogg,jpeg,png,jpg,svg'
 
 

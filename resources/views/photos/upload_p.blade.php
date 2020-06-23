@@ -20,20 +20,20 @@
                 enctype="multipart/form-data">
                 <div class="form-group fas">
                     <input type="text" class="form-control" placeholder="Naslov"
-                        style="background-color: white; color:black" name="title" id="title" required>
+                        style="background-color: white !important; color:black" name="title" id="title" required>
                 </div>
 
                 <div class="form-group fas ">
                     <input type="text" class="form-control" placeholder="Lokacija"
-                        style="background-color: white; color:black" name="location" id="location" required>
+                        style="background-color: white !important; color:black" name="location" id="location" required>
                 </div>
                 <div class="row fas">
                     <div class="form-group col-6">
                         <select class="form-control" id="exampleFormControlSelect1" name="album_id"
-                            style="background-color: white; color:black" required>
+                            style="background-color: white !important; color:black" required>
                             <option selected>Kategorija</option>
                             @foreach($albums as $album)
-                                <option value="{{ $album->id }}" style="background-color: white; color:black">
+                                <option value="{{ $album->id }}" style="background-color: white !important; color:black">
                                     {{ $album->name }}</option>
                             @endforeach
                         </select>
@@ -49,7 +49,7 @@
                 <div class="form-group fas " id="dodajVideo">
                     <div style="padding-top: 10px;">
                         <input type="text" class="form-control" placeholder="Youtube link"
-                            style="background-color: white; color:black" name="url" id="url">
+                            style="background-color: white !important; color:black" name="url" id="url">
                     </div>
                 </div>
 

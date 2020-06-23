@@ -1,3 +1,4 @@
+@@ -0,0 +1,96 @@
 @extends('layouts.app')
 
 @section('content')
@@ -9,64 +10,56 @@
         </div>
         <div class="row">
             <div class="divEditAl">
-                <form action=" /admin/photos/updatePhoto/{{ $data->id }}"
-                    name=" /admin/photos/updatePhoto/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                <form action=" /admin/photos/updatePhoto/{{$data->id}}" name=" /admin/photos/updatePhoto/{{$data->id}}" method="POST" enctype="multipart/form-data">
 
                     @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" style="background-color: white; color:black"
-                            name="title" value="{{ $data->title }}" id="title" required>
+                        <input type="text" class="form-control" style="background-color: white !important; color:black" name="title" value="{{$data->title}}" id="title" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" style="background-color: white; color:black"
-                            value="{{ $data->location }}" name="location" id="location" required>
+                        <input type="text" class="form-control" style="background-color: white !important; color:black" value="{{$data->location}}" name="location" id="location" required>
                     </div>
                     <div class="row fas">
                         <div class="form-group col-6">
-                            <select class="form-control" id="exampleFormControlSelect1" name="album_id"
-                                style="background-color: white; color:black" required>
-                                <option value="{{ $data->album_id }}" style="background-color: white; color:black">
-                                    {{ $data->album_id }}</option>
+                            <select class="form-control" id="exampleFormControlSelect1" name="album_id" style="background-color: white !important; color:black" required>
+                                <option value="{{$data->album_id}}" style="background-color: white !important; color:black">{{$data->album_id}}</option>
                                 @foreach($albums as $album)
-                                    <option value="{{ $album->id }}" style="background-color: white; color:black">
-                                        {{ $album->name }}</option>
+                                <option value="{{$album->id}}" style="background-color: white !important; color:black">{{$album->name}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group col-6">
-                            <a href="/admin/create" style="color: white;margin:auto;padding-left:20px">+ Dodaj
-                                Kategoriju</a>
+                            <a href="/admin/create" style="color: white;margin:auto;padding-left:20px">+ Dodaj Kategoriju</a>
                         </div>
 
                     </div>
                     @if($data->url)
-                        <div class="form-group">
-                            <label style="color:white" for="location">Video Url</label>
-                            <input type="text" class="form-control" style="background-color: white; color:black"
-                                value="{{ $data->url }}" name="url" id="url" required>
-                        </div>
+                    <div class="form-group">
+                        <label style="color:white" for="location">Video Url</label>
+                        <input type="text" class="form-control" style="background-color: white !important; color:black" value="{{$data->url}}" name="url" id="url" required>
+                    </div>
 
                     @else
-                        <div class="form-group mt-3 fas" style="text-align: center;">
-                            <label class="custom-file-upload">
-                                <i class="fa fa-cloud-upload"></i>+dodaj Sliku
-                            </label>
-                            <input type="file" class="up" name="photo" id="photo">
-                            <div class="invalid-feedback">
-                                Nijedna datoteka nije odabrana*
-                            </div>
+                    <div class="form-group mt-3 fas" style="text-align: center;">
+                        <label class="custom-file-upload">
+                            <i class="fa fa-cloud-upload"></i>+dodaj Sliku
+                        </label>
+                        <input type="file" class="up" name="photo" id="photo">
+                        <div class="invalid-feedback">
+                            Nijedna datoteka nije odabrana*
                         </div>
+                    </div>
 
-                        <div class="form-group mt-3 fas" style="text-align: center;">
-                            <label class="custom-file-upload">
-                                <i class="fa fa-cloud-upload"></i>+dodaj Thumbnail
-                            </label>
-                            <input class="up" type="file" name="thumbnail" />
-                            <div class="invalid-feedback">
-                                Nijedna datoteka nije odabrana*
-                            </div>
+                    <div class="form-group mt-3 fas" style="text-align: center;">
+                        <label class="custom-file-upload">
+                            <i class="fa fa-cloud-upload"></i>+dodaj Thumbnail
+                        </label>
+                        <input class="up" type="file" name="thumbnail" />
+                        <div class="invalid-feedback">
+                            Nijedna datoteka nije odabrana*
                         </div>
+                    </div>
                     @endif
 
 
@@ -81,19 +74,17 @@
                 </form>
 
                 <div class="col-4 form-group" style="margin: auto;padding-top:20px">
-                    <form action="/admin/photos/destroy/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/photos/destroy/{{$data->id}}" method="POST" enctype="multipart/form-data">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                         <button type="submit" class="btn btnError">OBRISI</button>
                     </form>
                 </div>
             </div>
             <div class="divEditAlbum">
-                <blade
-                    if|(%24data-%3Emedia_type%20%3D%3D%20%26%2339%3Bpng%26%2339%3B%7C%7C%20%24data-%3Emedia_type%20%3D%3D%20%26%2339%3Bjpg%26%2339%3B%20%7C%7C%20%24data-%3Emedia_type%20%3D%3D%20%26%2339%3Bsvg%26%2339%3B%7C%7C%20%24data-%3Emedia_type%20%3D%3D%20%26%2339%3BPNG%26%2339%3B)%0D>
-                    <th class="borderT"><img src="/images/thumbnail/{{ $data->thumbnail }}" style="width: 100%;" />
-                    </th>
+                @if($data->media_type == 'png'|| $data->media_type == 'jpg' || $data->media_type == 'svg'|| $data->media_type == 'PNG')
+                <th class="borderT"><img src="/images/thumbnail/{{$data->thumbnail}}" style="width: 100%;" /></th>
                 @else
-                    <th class="borderT"><img src="{{ $data->thumbnail }}" style="width: 100%;" /></th>
+                <th class="borderT"><img src="{{$data->thumbnail}}" style="width: 100%;" /></th>
 
                 @endif
             </div>

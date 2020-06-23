@@ -19,7 +19,7 @@ padding: 20px;
                         <input type="text" class="form-control" style=" color:white" name="title" value="{{$data->title}}" id="title" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" style=" color:white" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
+                        <textarea class="form-control" style=" color:white" name="description" rows="3" id="description" maxlength="1000" required>{{$data->description}} </textarea>
                     </div>
 
                     <div class="form-group text-white">

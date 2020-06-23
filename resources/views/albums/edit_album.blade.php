@@ -16,11 +16,11 @@ padding: 20px;
                                         @csrf
                                         <div class="form-group">
                                                 <!--   <label style="color:white" for="name">Album title</label>   -->
-                                                <input type="text" class="form-control" style="background-color: white; color:black" name="name" value="{{$data->name}}" id="title" required>
+                                                <input type="text" class="form-control" style="background-color: white !important; color:black" name="name" value="{{$data->name}}" id="title" required>
                                         </div>
                                         <div class="form-group">
                                                 <!--     <label style="color:white" for="description">Album Description</label>     -->
-                                                <textarea class="form-control" style="background-color: white; color:black" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
+                                                <textarea class="form-control" style="background-color: white !important; color:black" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
                                         </div>
 
                                         <div class="form-group text-white">

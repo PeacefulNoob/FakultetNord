@@ -60,6 +60,8 @@
         </div>
     </div>
 </nav>
+@if(count($tags->posts) > 0)
+
 @foreach($tags->posts as $post)
     <!-- post -->
     <div class="postMain">
@@ -81,8 +83,15 @@
         </div>
     </div>
     <!-- /post -->
+    @endforeach
+@else
+<div class="postMain">
 
+    <div class="col-md-12">
+        <h1> Tag has no posts</h1>
+    </div>
+</div>
+@endif
 
-@endforeach
 
 @endsection

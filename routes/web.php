@@ -40,7 +40,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     Route::get('/photos/edit_photo/{id}', 'PhotoController@edit');
     Route::post('/photos/destroy/{id}', 'PhotoController@destroy');
 
-    Route::post('/admin/updateSite/{id}', 'SiteController@update');
+    Route::post('/updateSite/{id}', 'SiteController@update');
     Route::get('/edit_site/{id}', 'SiteController@edit');
     Route::get('/all_sliders', 'SliderController@index');
     Route::get('/add_slider', 'SliderController@create');

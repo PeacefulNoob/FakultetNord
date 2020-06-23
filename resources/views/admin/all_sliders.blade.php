@@ -6,8 +6,7 @@
 <main class="main-content1">
     <div class="container-fluid ">
         <div class="row" style="padding-bottom:20px">
-
-            <a class="btn back " href="/admin/add_slider"><i class="fa fa-arrow-left" aria-hidden="true"></i> Add SLIDER</a>
+           <a class="btn btnDodajMedia" href="/admin/add_slider"> Add SLIDER</a>
         </div>
         <div class="row" style="padding-bottom:20px">
 
