@@ -41,7 +41,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -55,33 +57,38 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if(Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
                         @else
-                        <li class="nav-item">
-                            <a id="navbarDropdown" style="color:white;" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item" style="margin: auto;">
-                            <img class="adminIkonica" src="/images/2profil.svg" />
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color:white;" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <li class="nav-item">
+                                <a id="navbarDropdown" style="color:white;" class="nav-link " href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item" style="margin: auto;">
+                                <img class="adminIkonica" src="/images/2profil.svg" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white;" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Odjavi se') }}
-                            </a>
+                                    {{ __('Odjavi se') }}
+                                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
 
                         @endguest
                     </ul>
@@ -98,7 +105,7 @@
         </nav>
         @if(Auth::check())
 
-        @include('layouts.adminHeader')
+            @include('layouts.adminHeader')
         @endif
         <main class="py-4">
             @include('layouts.messages')

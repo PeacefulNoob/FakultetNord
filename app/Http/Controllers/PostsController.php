@@ -29,11 +29,11 @@ class PostsController extends Controller
     {
      
         $posts = DB::table('posts')->orderBy('created_at', 'desc')->paginate(10);
+        $tags = DB::table('tags')->orderBy('id', 'desc')->get();
 
 
-        return view('posts.index')->with('posts', $posts);
+        return view('posts.index' , compact("posts", "tags"));
     }
-
     /**
      * Show the form for creating a new resource.
      *

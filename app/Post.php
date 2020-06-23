@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Tag;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -29,5 +31,9 @@ class Post extends Model
                'email' => request('email'),
                'post_id' => $this->id
            ]);
+      }
+      public function tags()
+      {
+          return $this->belongsToMany(Tag::class);
       }
 }

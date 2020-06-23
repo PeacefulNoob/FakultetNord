@@ -62,3 +62,4 @@ Route::resource('posts', 'PostsController');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/services', "PagesController@services");
 Route::post('/posts/{post}/comments' , 'CommentController@store');
+Route::get('/tags/{id}' , 'TagController@show' );

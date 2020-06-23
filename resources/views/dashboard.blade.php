@@ -4,7 +4,7 @@
 
 <div class="container text-white">
     <div class="row">
-        <div class="panel-heading"><h1>Dashboard</h1></div>
+                        <div class="panel-heading"><h1>Dashboard</h1></div>
 
         <div class="col-md-8 col-md-offset-2 m-auto">
             <div class="panel panel-default">

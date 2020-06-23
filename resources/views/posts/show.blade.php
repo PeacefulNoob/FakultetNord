@@ -67,13 +67,13 @@
         <h1>{{ $post->title }}</h1>
     </div>
 
-    <div class="row">
+    <div class="row my-5">
 
-        <div class="col-6">
-            <img style="width:30%" src="/images/post_images/{{ $post->cover_image }}">
+        <div class="col-12">
+            <img style="width:100%" src="/images/post_images/{{ $post->cover_image }}">
             <br><br>
         </div>
-        <div class="col-6">
+        <div class="col-12 p-5">
             <div>
                 {!!$post->body!!}
             </div>
@@ -95,7 +95,7 @@
                 @foreach($post->comments as $comment)
                     <div class="media well">
                         <div class="media-left">
-                            <img class="media-object" src="/images/avatar.png" alt="">
+                            <img class="media-object" src="/images/post_images/author.png" alt="">
                         </div>
                         <div class="media-body">
                             <div class="media-heading">
@@ -110,9 +110,9 @@
                 <!-- /comment -->
             </div>
         @else
-        <div class="post-comments">
-<p>No comments</p>
-        </div>
+            <div class="post-comments">
+                <p>No comments</p>
+            </div>
         @endif
     </div>
     <!-- /comments -->
@@ -125,13 +125,13 @@
         <form class="post-reply" method="POST" action="/posts/{{ $post->id }}/comments">
             {{ csrf_field() }}
             <div class="row">
-                <div class="col-md-6 my-3">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-3">
                     <div class="form-group">
                         <span>Name *</span>
                         <input class="input" type="text" name="name" required>
                     </div>
                 </div>
-                <div class="col-md-6 my-3">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-3">
                     <div class="form-group">
                         <span>Email *</span>
                         <input class="input" type="email" name="email" required>
@@ -152,14 +152,23 @@
 
     @if(!Auth::guest())
         @if(Auth::user()->id == $post->user_id)
-            <a href="/posts/{{ $post->id }}/edit" class="btn btn-default">Edit</a>
 
-            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' =>
-            'pull-right'])!!}
-            {{ Form::hidden('_method', 'DELETE') }}
-            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-            {!!Form::close()!!}
+            <div class="row w-25 ml-auto">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                    <a href="/posts/{{ $post->id }}/edit" class="btn btn-default">Edit</a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' =>
+                    'pull-right'])!!}
+                    {{ Form::hidden('_method', 'DELETE') }}
+                    {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                    {!!Form::close()!!}
+                </div>
+            </div>
         @endif
     @endif
 </div>
+
 @endsection

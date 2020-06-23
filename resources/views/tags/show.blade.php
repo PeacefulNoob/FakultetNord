@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="/css/blog.css">
 @endsection
 @section('content')
+
+@yield('other_pages.css')
 <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -58,48 +60,29 @@
         </div>
     </div>
 </nav>
-@yield('other_pages.css')
+@foreach($tags->posts as $post)
+    <!-- post -->
+    <div class="postMain">
+
+        <div class="col-md-12">
+            <div class="post post-row">
+                <a class="post-img" href="/posts/{{ $post->id }}"><img src="/posts/{{ $post->cover_image }}"
+                        alt=""></a>
+                <div class="post-body">
+                    <div class="post-meta">
 
 
-
-<div class="postMain">
-    @include('layouts.tags')
-    <h1 class="my-4">Blog</h1>
-    <div class="row_articles">
-        @if(count($posts) > 0)
-            @foreach($posts as $post)
-                <div class="article col-xl-6 col-lg-6 col-md-6 col-sm-12 grid__post p-3 ">
-                    <div class="article__inner">
-                        <a class="article__image" href="/posts/{{ $post->id }}">>
-                            <img src="/images/post_images/{{ $post->cover_image }}" alt="Post">
-                        </a>
-                        <div class="article__content">
-                            <div class="article__author">
-                                <small> {{-- {{ $post->user->name }} --}}</small>
-
-                            </div>
-                            <h2 class="article__title">
-                                {{ $post->title }}
-                            </h2>
-                            <div class="article__meta">
-                                <div class="article-tags">
-                                    <div class="article-tags__box">
-                                        <a href="/tag/travel/"> Priroda {{-- {{ $post->tag->name }} --}}</a>
-                                    </div>
-                                </div>
-                                <span class="article__date">{{ $post->created_at }}</span>
-                            </div>
-                        </div>
+                        <span class="post-date">{{ $post->created_at->toFormattedDateString() }}</span>
                     </div>
+                    <h3 class="post-title"><a href="/posts/{{ $post->id }}"> {!!$post->title!!}</a></h3>
+                    <p> {!!$post->body!!}</p>
                 </div>
-                @endforeach
-    
             </div>
-   
-@else
-    <p>No posts found</p>
-</div>
-    @endif
-</div>
+        </div>
+    </div>
+    <!-- /post -->
+
+
+@endforeach
 
 @endsection

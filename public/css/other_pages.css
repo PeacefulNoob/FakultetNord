@@ -3,6 +3,8 @@
     box-shadow: 0 1.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
     background-color: #3e3b3c;
+    height: 75px;
+
 }
 
 .well {
@@ -36,4 +38,8 @@
     width: 80%;
     margin: auto;
     margin-bottom: 14%;
+}
+
+.menu-wrap {
+    top: 6% !important;
 }
