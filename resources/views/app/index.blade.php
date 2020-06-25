@@ -86,13 +86,30 @@
             </div>
           </div>
           <?php
-          if ($i++ == 4)
+          if ($i++ == 3)
             break;
           ?>
 
           @endforeach
           <div class="showMore">
-            <h4><a href="/galeries"> Show more </a></h4>
+            <a href="/galeries">
+              <svg class="ov-visible" xmlns="http://www.w3.org/1500/svg" width="100" height="55" viewBox="0 0 90 55">
+   <defs>
+   <style>.a{fill:black;transition: 0.3s ease;}
+     
+   </style>
+   </defs>
+   <rect class="a" id ="square0" width="15" height="17"/>
+   <rect class="a" id ="square1" width="15" height="17" transform="translate(0 25)"/>
+   <rect class="a" id ="square2" width="15" height="17" transform="translate(25)"/>
+   <rect class="a" id ="square3"  width="15" height="17" transform="translate(25 25)"/>
+   <rect class="a" id ="square4" width="15" height="17" transform="translate(50)"/>
+   <rect class="a" id ="square5" width="15" height="17" transform="translate(75)"/>
+   <rect class="a" id ="square6" width="15" height="17" transform="translate(50 25)"/>
+   <rect class="a" id ="square7" width="15" height="17" transform="translate(75 25)"/>
+   
+   </svg>
+             </a>
           </div>
         </div>
       </div>
@@ -113,12 +130,13 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 sliderslika" src="/images/Kenan-1_1580473817.jpg" alt="First slide">
+            
+            <img class="d-block w-100 sliderslika" src="/images/scott-walsh-CQl3Y5bV6FA-unsplash_1593071724.jpg" alt="First slide">
           </div>       
           @if(count($sliders)>0) 
             @foreach($sliders as $slider)
             <div class="carousel-item ">
-              <img class="d-block w-100 sliderslika" src="/images/sliders/{{$slider->photo}}" alt="Second slide">
+              <img class="d-block w-100 sliderslika" src="/images/sliders/{{$slider->photo}}" alt="{{$slider->title}}">
             </div>     
             @endforeach
 @else

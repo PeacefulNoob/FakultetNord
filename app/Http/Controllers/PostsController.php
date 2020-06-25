@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Post;
 use DB;
+use App\Tag;
+use App\User;
 
 class PostsController extends Controller
 {
@@ -28,11 +30,10 @@ class PostsController extends Controller
     public function index()
     {
      
-        $posts = DB::table('posts')->orderBy('created_at', 'desc')->paginate(10);
-        $tags = DB::table('tags')->orderBy('id', 'desc')->get();
-
-
-        return view('posts.index' , compact("posts", "tags"));
+        $posts = Post::all();
+        $tags = Tag::all();
+        $users = User::all();
+        return view('posts.index' , compact("posts", "tags","users"));
     }
     /**
      * Show the form for creating a new resource.
@@ -41,7 +42,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $tags = \App\Tag::get()->pluck('name', 'id');
+        return view('posts.create', compact('tags'));
+
     }
 
     /**
@@ -52,6 +55,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+     
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
@@ -81,8 +85,9 @@ class PostsController extends Controller
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->cover_image = $fileNameToStore;
+       
         $post->save();
-
+        $post->tag()->sync((array)$request->input('tag'));
         return redirect('/posts')->with('success', 'Post Created');
     }
 
@@ -174,18 +179,15 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
 
-        //Check if post exists before deleting
         if (!isset($post)) {
             return redirect('/posts')->with('error', 'No Post Found');
         }
 
-        // Check for correct user
         if (auth()->user()->id !== $post->user_id) {
             return redirect('/posts')->with('error', 'Unauthorized Page');
         }
 
         if ($post->cover_image != 'noimage.jpg') {
-            // Delete Image
             Storage::delete('public/cover_images/' . $post->cover_image);
         }
 

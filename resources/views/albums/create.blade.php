@@ -6,7 +6,7 @@
     <main class="myMain adminMain">
         <div class="container-fluid">
             <div class="row" style="padding-bottom:20px">
-                <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+                <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;">   @include('components.back')</a>
 
             </div>
             <div class="row justify-content-center">
@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group formaAddAlb">
                             <label style="color:white" for="description">Description</label>
-                            <textarea class="form-control" style="background-color: white !important; color:black" name="description" rows="3" maxlength="240" id="description">  </textarea>
+                            <textarea class="form-control" style="background-color: white !important; color:black" name="description" rows="3"  id="description">  </textarea>
                         </div>
                         <div class="form-group formaAddAlb" style=" padding-bottom:20px">
                             <label style="color:white">COVER Select file to upload:</label>

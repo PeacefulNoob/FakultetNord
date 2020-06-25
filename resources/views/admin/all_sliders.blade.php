@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-
+ <div class="row" style="padding-bottom:20px">
+           <a class="btn btnDodajMedia" href="/admin/add_slider"> Add SLIDER</a>
+        </div>
 @if(count($sliders)>0)
 <main class="main-content1">
     <div class="container-fluid ">
-        <div class="row" style="padding-bottom:20px">
-           <a class="btn btnDodajMedia" href="/admin/add_slider"> Add SLIDER</a>
-        </div>
+       
         <div class="row" style="padding-bottom:20px">
 
-            <a class="btn back " href="/admin/"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+            <a class="btn back " href="/admin/">@include('components.back')</a>
         </div>
         <div class="allAlRow">
             @foreach($sliders as $slider)

@@ -5,7 +5,7 @@
 <main class="myMain adminMain">
     <div class="container-fluid memd">
         <div class="row" style="padding-bottom:20px">
-            <a class="btn back " href="/admin/albums/all_albums"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+            <a class="btn back " href="/admin/albums/all_albums">   @include('components.back')</a>
 
         </div>
         <div class="row">

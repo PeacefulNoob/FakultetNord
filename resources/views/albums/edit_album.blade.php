@@ -4,7 +4,7 @@
 <main class="myMain adminMain">
         <div class="container-fluid memd">
                 <div class="row" style="padding-bottom:20px">
-                        <a class="btn back " href="/admin/albums/all_albums"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+                        <a class="btn back " href="/admin/albums/all_albums">   @include('components.back')</a>
 
                 </div>
                 <div class="row">
@@ -20,7 +20,7 @@ padding: 20px;
                                         </div>
                                         <div class="form-group">
                                                 <!--     <label style="color:white" for="description">Album Description</label>     -->
-                                                <textarea class="form-control" style="background-color: white !important; color:black" name="description" rows="3" id="description" maxlength="240" required>{{$data->description}} </textarea>
+                                                <textarea class="form-control" style="background-color: white !important; color:black" name="description" rows="3" id="description" required>{{$data->description}} </textarea>
                                         </div>
 
                                         <div class="form-group text-white">

@@ -64,18 +64,30 @@
 
 <div class="postMain">
     @include('layouts.tags')
-    <h1 class="my-4">Blog</h1>
+
+<div class="jumbotron ">
+    <div class="container">
+      <h1 class="display-4">Blog</h1>
+      <p class="lead">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+           Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, </p>
+    </div>
+  </div>
+  <style>
+    .jumbotron{
+        background-color: #f0f0f0 !important;
+      }
+  </style>
     <div class="row_articles">
         @if(count($posts) > 0)
             @foreach($posts as $post)
                 <div class="article col-xl-6 col-lg-6 col-md-6 col-sm-12 grid__post p-3 ">
                     <div class="article__inner">
-                        <a class="article__image" href="/posts/{{ $post->id }}">>
+                        <a class="article__image" href="/posts/{{ $post->id }}">
                             <img src="/images/post_images/{{ $post->cover_image }}" alt="Post">
                         </a>
                         <div class="article__content">
                             <div class="article__author">
-                                <small> {{-- {{ $post->user->name }} --}}</small>
+                                <small> Author :    {{ $post->user->name }} </small>
 
                             </div>
                             <h2 class="article__title">
@@ -84,7 +96,13 @@
                             <div class="article__meta">
                                 <div class="article-tags">
                                     <div class="article-tags__box">
-                                        <a href="/tag/travel/"> Priroda {{-- {{ $post->tag->name }} --}}</a>
+                                        
+                                            @foreach($post->tag as $tag) 
+                                                <a href="/tag/travel/"> {{$tag->name}}</a>
+                                            @endforeach      
+                                       
+                            
+                                      
                                     </div>
                                 </div>
                                 <span class="article__date">{{ $post->created_at }}</span>

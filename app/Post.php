@@ -24,7 +24,6 @@ class Post extends Model
       }
       public function addComment($body)
       {
-          /* $this->comments()->create(compact('body')); */
            Comment::create([
                'body' => request('body') ,
                'name' => request('name'),
@@ -32,8 +31,8 @@ class Post extends Model
                'post_id' => $this->id
            ]);
       }
-      public function tags()
+      public function tag()
       {
-          return $this->belongsToMany(Tag::class);
+          return $this->belongsToMany(Tag::class, 'post_tag');
       }
 }

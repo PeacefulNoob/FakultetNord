@@ -6,13 +6,15 @@
     <main class="myMain adminMain">
         <div class="container-fluid">
             <div class="row" style="padding-bottom:20px">
-                <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Nazad</a>
+                <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;">                
+                        @include('components.back')     
+                </a>
 
             </div>
             <div class="row justify-content-center">
 
                 <div class="col-md-5 pt-3">
-                    <h3 style="color:white" ;> Novi Slajder </h3>
+                    <h3 style="color:white;"> Novi Slajder </h3>
 
                     <form action="{{ action('SliderController@store') }}" method="POST" enctype="multipart/form-data">
                         <div class="form-row">

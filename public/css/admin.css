@@ -138,3 +138,46 @@ table thead th {
     width: 80%;
     margin: auto;
 }
+
+.borderT img {
+    object-fit: cover;
+}
+
+/* ////////////////////////////////////////////////////////svg
+ */
+
+.pravaPrev {
+    transition: 0.5s ease;
+    transform: translate3d(64.107px, 4.492px, 0px) scale(1) rotate(-90deg);
+}
+.prev_button:hover g .pravaPrev {
+    transform: translate3d(60.107px, 4.492px, 0px) scale(1) rotate(-90deg);
+}
+@keyframes moveTextPrev {
+    0% {
+        transform: translateX(0px);
+    }
+
+    30% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(-8px);
+    }
+}
+
+.prev_button:hover {
+    animation: moveTextPrev 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.vrhPrev {
+    transform: translate3d(393.586px, 2341.385px, 0px)scale(1) rotate(180deg);
+    transition: 0.5s ease;
+
+}
+
+.prev_button:hover .vrhPrev {
+    transform: translate3d(389.586px, 2341.385px, 0px) scale(1) rotate(180deg);
+}

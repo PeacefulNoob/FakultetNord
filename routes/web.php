@@ -56,6 +56,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     Route::get('/albums/all_albums', 'GalleryController@index');
     Route::get('/albums/{id}', 'GalleryController@show');
     Route::post('/create', 'GalleryController@store');
+
+
+/*     Route::get('/post_tag', 'TagController@create');
+ */    Route::post('/store_tag', 'TagController@store');
 });
 
 Route::resource('posts', 'PostsController');

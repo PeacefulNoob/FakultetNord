@@ -5,7 +5,7 @@
   <div class="container-fluid photos">
     <div class="row" style="padding-bottom:20px">
 
-      <a class="btn btnDodajMedia" href="/admin/albums/all_albums">Sve Kategorije</a>
+      <a class="btn btnDodajMedia" href="/admin/albums/all_albums">Svi Albumi</a>
 
     </div>
     <div class="row" style="padding-bottom:20px">

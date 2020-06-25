@@ -60,24 +60,34 @@
         </div>
     </div>
 </nav>
+<div class="myMain">
+<h1>{{$tags->name}}</h1>
+<div class="row_articles m-5">
+
 @if(count($tags->posts) > 0)
 
 @foreach($tags->posts as $post)
     <!-- post -->
-    <div class="postMain">
+    <div class="article col-xl-6 col-lg-6 col-md-6 col-sm-12 grid__post p-3 ">
+        <div class="article__inner">
+            <a class="article__image" href="/posts/{{ $post->id }}">
+                <img src="/images/post_images/{{ $post->cover_image }}" alt="Post">
+            </a>
+            <div class="article__content">
+                <div class="article__author">
+                    <small> {{ $post->user->name }}</small>
 
-        <div class="col-md-12">
-            <div class="post post-row">
-                <a class="post-img" href="/posts/{{ $post->id }}"><img src="/posts/{{ $post->cover_image }}"
-                        alt=""></a>
-                <div class="post-body">
-                    <div class="post-meta">
-
-
-                        <span class="post-date">{{ $post->created_at->toFormattedDateString() }}</span>
+                </div>
+                <h2 class="article__title">
+                    {{ $post->title }}
+                </h2>
+                <div class="article__meta">
+                    <div class="article-tags">
+                        <div class="article-tags__box">
+                            <a href="/tag/travel/"> {{$tags->name}}</a>
+                        </div>
                     </div>
-                    <h3 class="post-title"><a href="/posts/{{ $post->id }}"> {!!$post->title!!}</a></h3>
-                    <p> {!!$post->body!!}</p>
+                    <span class="article__date">{{ $post->created_at }}</span>
                 </div>
             </div>
         </div>
@@ -92,6 +102,6 @@
     </div>
 </div>
 @endif
-
-
+</div>
+</div>
 @endsection

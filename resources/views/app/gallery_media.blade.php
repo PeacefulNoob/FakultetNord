@@ -20,17 +20,22 @@
     </div>
   </div>
   @if(count($photos)>0)
+
+
   <main class="main-content ">
-    <div class="glavniR h-50 m-auto" id="glavniAl">
+
+
+    <div class="glavniR" id="glavniAl">
       @foreach($photos as $photo)
       @if($photo->media_type == 'png'|| $photo->media_type == 'jpg' || $photo->media_type == 'svg'|| $photo->media_type == 'PNG')
 
       <div class=" media {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
         <div class="mediaDiv glry-img mediap">
-          <img class="picInd" data-src="/images/{{$photo->photo}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}">
+          <img class="picInd" src="/images/{{$photo->photo}}" data-value="{{$photo->id}}" name="/images/{{$photo->photo}}" alt="{{$photo->title}}">
 
         </div>
       </div>
+
       @else
       <div class="media {{$photo->album_id}}" data-aos="zoom-in-up" data-aos-once="true">
         @if($photo->photo == "null")
@@ -38,7 +43,10 @@
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$photo->url}}"></iframe>
         </div>
         @endif
+
       </div>
+
+
       @endif
       @endforeach
     </div>

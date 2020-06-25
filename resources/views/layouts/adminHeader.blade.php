@@ -16,7 +16,9 @@
                                 Settings</a></li>
                         <li> <a href="/dashboard" class="admin_menu__link"><i class="fa fa-fw fa-home"></i>Blog
                                 Settings</a></li>
-
+                              {{--   <li> <a href="post_tag" class="admin_menu__link"><i class="fa fa-upload"></i>+
+                                    Tags</a></li>
+ --}}
                         <li> <a href="/admin/albums/all_albums" class="admin_menu__link"><i
                                     class="fa fa-fw fa-home"></i>Svi Albumi</a></li>
                         <li><a href="/admin/create" class="admin_menu__link"><i class="fa fa-upload"></i>+ Dodaj
