@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="row" style="padding-bottom:20px">
-           <a class="btn btnDodajMedia" href="/admin/add_slider"> Add SLIDER</a>
-        </div>
+<div class="">
+
 @if(count($sliders)>0)
-<main class="main-content1">
+<main class="main-content1  ">
     <div class="container-fluid ">
-       
-        <div class="row" style="padding-bottom:20px">
+        <div class="btnBack" >
 
             <a class="btn back " href="/admin/">@include('components.back')</a>
         </div>
+        <div class="jumbotron text-center">
+            <h1>Sliders Grid</h1> 
+            </div>
         <div class="allAlRow">
             @foreach($sliders as $slider)
 
@@ -49,6 +50,6 @@
 @else
 <p style="color:white">No sliders</p>
 @endif
-
+</div>
 
 @endsection

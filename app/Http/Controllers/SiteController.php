@@ -85,8 +85,7 @@ class SiteController extends Controller
         ]);
         $title =  $request->title;
         $description = $request->description;
-        $url = $request->url;
-
+      
 
         if ($request->hasFile('photo')) {
             //PHOTO
@@ -108,7 +107,6 @@ class SiteController extends Controller
         DB::table('site')->where('id', $id)->update([
             'title' => $title,
             'description' => $description,
-            'url' => $url,
             'photo' => $filenameToStore
 
         ]);

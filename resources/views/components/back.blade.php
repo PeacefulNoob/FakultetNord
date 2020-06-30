@@ -10,8 +10,7 @@
           }
           .b{
             fill:#fff;
-            font-size:16px;
-            font-family:Raleway-Medium, Raleway;
+            font-size:14px;
             font-weight:500;letter-spacing:0.15em;
           }</style>
         </defs>

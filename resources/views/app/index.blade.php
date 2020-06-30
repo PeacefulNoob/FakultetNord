@@ -71,12 +71,12 @@
       <div class="container-fluid ">
 
 
-        <div class="glavniR">
+        <div class="glavniR ">
           @foreach($albums as $album)
           <div class="col-sm-6	col-md-6	col-lg-3	col-xl-3   {{$album->id}} pb-2  pl-2" data-aos="zoom-in-up" data-aos-once="true">
-            <div id="mediaContainer" class="mediaDiv glry-img ">
+            <div id="mediaContainer" class="mediaDiv glry-img h30 ">
               <a class="cat" href="/app/gallery_media/{{$album->id}}">
-                <img class="picInd" data-src="/images/cover_image/{{$album->cover_image}}" alt="Cover picture">
+                <img class="picInd " data-src="/images/cover_image/{{$album->cover_image}}" alt="Cover picture">
                 <div class="overlay_index">
                   <div class=" headOver">
                     <img src="/images/cover_image/logos/{{$album->logo_image}}" alt=" Logo Image">

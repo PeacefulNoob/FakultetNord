@@ -41,16 +41,11 @@ table thead th {
 .adminNav {
     background-color: #134284;
     padding: 0px !important;
-    position: fixed;
-    top: 0;
-    width: 100%;
+
     z-index: 20;
 }
 
-.adminMain {
-    margin-top: 20px !important;
-    width: 90% !important;
-}
+
 
 .divEditAlbum {
     width: 50%;
@@ -150,9 +145,11 @@ table thead th {
     transition: 0.5s ease;
     transform: translate3d(64.107px, 4.492px, 0px) scale(1) rotate(-90deg);
 }
+
 .prev_button:hover g .pravaPrev {
     transform: translate3d(60.107px, 4.492px, 0px) scale(1) rotate(-90deg);
 }
+
 @keyframes moveTextPrev {
     0% {
         transform: translateX(0px);
@@ -180,4 +177,105 @@ table thead th {
 
 .prev_button:hover .vrhPrev {
     transform: translate3d(389.586px, 2341.385px, 0px) scale(1) rotate(180deg);
+}
+
+.margAdmin {
+    width: 78%;
+    margin-left: 22%;
+}
+
+.amenu {
+    height: 100% !important;
+    width: 20%;
+    background-color: #134284;
+    position: fixed;
+    left: 0;
+    z-index: 21;
+}
+
+.amenu div {
+    margin-top: 40%;
+    margin-left: 3%;
+}
+
+.amenu div ul {
+    text-align: left;
+    list-style: none;
+    border-top: 1px solid;
+    padding: 0px;
+    display: inline;
+}
+
+.amenu div ul li {
+    padding: 7% 3%;
+    margin: 2% 1%;
+
+    border-bottom: 1px solid;
+
+}
+
+.amenu div ul li:hover a {
+    color: white;
+
+}
+
+.amenu div ul li:hover {
+
+    background-color: #0d3772;
+
+}
+
+.amenu div ul li a {
+    color: lightgrey;
+
+}
+
+.myLogoSvgAd:hover {
+    background-color: #255cab;
+
+}
+
+.myLogoSvgAd {
+    transition: 0.4s ease;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 150px;
+    padding: 5%;
+    background-color: #0d3670;
+    border-radius: 10px;
+}
+
+.table-striped tr {
+    border-bottom: 1px solid;
+}
+
+.table-striped tr td {
+    border-right: 1px solid;
+}
+
+.table-striped tr td:last-child {
+    border-right: none;
+}
+
+.table-striped tr td a {
+    color: white;
+}
+
+.table-striped tr td a:hover {
+    color: rgb(255, 164, 164);
+}
+
+.btnBack {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+}
+
+.doni {
+    position: fixed;
+    bottom: 0%;
+    left: 1%;
+    z-index: 25;
 }

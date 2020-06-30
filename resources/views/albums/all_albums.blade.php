@@ -3,18 +3,21 @@
 @section('content')
 
 @if(count($albums)>0)
-<main class="main-content1">
+<main class="main-content1 ">
   <div class="container-fluid ">
 
-    <div class="row" style="padding-bottom:20px">
+    <div class="btnBack" >
 
       <a class="btn back " href="/admin/">   @include('components.back')</a>
     </div>
+    <div class="jumbotron text-center">
+      <h1>Album Grid</h1> 
+      </div>
     <div class="allAlRow">
       @foreach($albums as $album)
 
       <div class="card" style="width: 22rem;    margin: auto;">
-        <a href="/admin/adminMedia/{{$album->id}}">
+        <a href="/admin/albums/edit_album/{{$album->id}}">
 
           <img class="card-img-top allAlimg" src="/images/cover_image/{{$album->cover_image}}" alt="Card image cap">
 

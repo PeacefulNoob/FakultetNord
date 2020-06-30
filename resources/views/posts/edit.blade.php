@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="postMain text-white">
+<div class="postMain text-white ">
 
     <h1>Edit Post</h1>
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' =>

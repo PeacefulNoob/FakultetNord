@@ -39,7 +39,7 @@
         <img id="loader" src="/images/animacija/minic.gif " />
     </div>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-fixed-top adminNav" id="adminNav1">
+        <nav class="navbar navbar-expand-md  adminNav" id="adminNav1">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -96,18 +96,12 @@
             </div>
         </nav>
 
-        <nav class="navbar navbarMoj shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="/admin/ ">
-                    <img class="myLogoSvg" src="/images/Nord-logotype-bijela-bez slogana.svg">
-                </a>
-            </div>
-        </nav>
+   
         @if(Auth::check())
 
             @include('layouts.adminHeader')
         @endif
-        <main class="py-4">
+        <main class="py-4 margAdmin ">
             @include('layouts.messages')
 
             @yield('content')

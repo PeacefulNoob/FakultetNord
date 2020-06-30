@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="site-wrap">
+<div class="site-wrap ">
 
-    <main class="myMain adminMain">
+    <main class="main-content1 ">
         <div class="container-fluid">
-            <div class="row" style="padding-bottom:20px">
+            <div class="btnBack" >
                 <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;">                
                         @include('components.back')     
                 </a>
@@ -14,8 +14,9 @@
             <div class="row justify-content-center">
 
                 <div class="col-md-5 pt-3">
-                    <h3 style="color:white;"> Novi Slajder </h3>
-
+                    <div class= "jumbotron text-center">
+                    <h3 style="color:white;"> Add New Slider </h3>
+                </div>
                     <form action="{{ action('SliderController@store') }}" method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="form-group  formaAddAlb">

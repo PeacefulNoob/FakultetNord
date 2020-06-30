@@ -1,18 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="site-wrap">
+<div class="site-wrap ">
 
-    <main class="myMain adminMain">
+    <main class="main-content1 ">
         <div class="container-fluid">
-            <div class="row" style="padding-bottom:20px">
+            <div class="btnBack" >
                 <a class="btn " href="/admin/photos/upload_p/" style="background-color: transparent; color:white;">   @include('components.back')</a>
 
             </div>
+            <div class="jumbotron text-center">
+                <h1>   New Album</h1> 
+                </div>
             <div class="row justify-content-center">
 
                 <div class="col-md-5 pt-3">
-                    <h3 style="color:white" ;> Novi Album </h3>
+                    
 
                     <form action="{{ action('GalleryController@store') }}" method="POST" enctype="multipart/form-data">
                         <div class="form-row">

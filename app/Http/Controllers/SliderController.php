@@ -163,7 +163,10 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $slider = Slider::find($id);
+       
+        $slider->delete();
+        return redirect('/admin/ ')->with('success', 'Uspesno obrisan slajder');
     }
  
 }

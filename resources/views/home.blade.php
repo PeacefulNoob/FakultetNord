@@ -1,18 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="myMain adminMain mem">
+<main class="myMain  mem ">
   <div class="container-fluid photos">
-    <div class="row" style="padding-bottom:20px">
-
-      <a class="btn btnDodajMedia" href="/admin/albums/all_albums">Svi Albumi</a>
-
-    </div>
-    <div class="row" style="padding-bottom:20px">
-
-      <a class="btn btnDodajMedia" href="/admin/photos/upload_p/">+Dodaj video/fotografiju</a>
-
-    </div>
+<div class="jumbotron"> <h1>All Media</h1></div>
     <table class="table table-hover">
       <thead>
         <tr>

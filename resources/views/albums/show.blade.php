@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="myMain">
+<main class="main-content1 ">
     <h1 style="color:white;">{{$album->name}}</h1>
     <a class="btn btn-info" href="/admin/">   @include('components.back')</a>
     <a class="btn btn-info" href="/admin/photos/upload_p/{{$album->id}}">Upload media</a>

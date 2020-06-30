@@ -285,7 +285,6 @@ body {
 .myMain {
     width: 100%;
     margin: auto;
-    margin-top: 10%;
 }
 
 .heroVideo {
@@ -527,10 +526,7 @@ hr.hr-short {
     width: 300px;
 }
 
-.menu-wrap .toggler:checked~.amenu {
-    visibility: visible;
-    width: 400px !important;
-}
+
 
 .menu-wrap .toggler:checked~.menu>div {
     transform: scale(1);
@@ -556,9 +552,7 @@ hr.hr-short {
     height: 60%;
 }
 
-.menu-wrap .amenu>div {
-    width: 350px !important;
-}
+
 
 .menu-wrap .menu>div {
     width: 250px;
@@ -678,7 +672,8 @@ hr.hr-short {
 }
 
 .main-content1 {
-    padding-top: 5%;
+    /*     padding-top: 8%;
+ */
     height: 100%;
     margin: 20px;
 }
@@ -834,7 +829,6 @@ hr.hr-short {
 }
 
 .card-img-top {
-    height: 40vh;
     object-fit: cover;
 }
 
@@ -917,17 +911,17 @@ input[class="up"] {
 
 .uploadOpcija button {
     background-color: #134284;
-    margin: auto;
+    margin: 3px;
     margin-bottom: 10%;
     padding: 6px;
     border: none;
     color: white;
-    width: 40%;
+    width: 55%;
     height: auto;
     border-radius: 2px;
 }
 
-.btnDodajMedia {
+.btnsaveMedia {
     background-color: #134284;
     color: white;
     border: none;
@@ -1120,6 +1114,7 @@ a.scrollToTop:focus {
 
 .jumbotron {
     background-color: transparent !important;
+    color: white;
 }
 
 .section-2 {}
@@ -1168,10 +1163,6 @@ a.scrollToTop:focus {
 
 .hadm {
     width: 20% !important;
-}
-
-.amenu {
-    height: 100% !important;
 }
 
 .sliderslika {
@@ -1450,4 +1441,9 @@ svg:hover #square7 {
     width: 100%;
     margin: auto;
     padding: 2%;
+}
+
+
+.h30 {
+    height: 30vh;
 }

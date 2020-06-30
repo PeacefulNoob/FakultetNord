@@ -2,12 +2,15 @@
 
 @section('content')
 
-<main class="myMain adminMain">
+<main class="main-content1 ">
     <div class="container-fluid memd">
-        <div class="row" style="padding-bottom:20px">
+        <div class="btnBack" >
             <a class="btn back " href="/admin/all_sliders">   @include('components.back')</a>
 
         </div>
+        <div class="jumbotron text-center">
+            <h1>   Edit Slider</h1> 
+            </div>
         <div class="row">
 
             <div class="divEditAl">
@@ -30,18 +33,26 @@
                     <input type="checkbox" name="isActive">
                     <label class="text-white">Is slider active?</label><br /><br />
 <label class="text-white">{{$data->isActive}} ( 0-no 1-yes) </label>
+
                     <div class="row form-group">
 
                         <div class="col-md-12" style="text-align:center">
-                            <button type="submit" class="btn btn-primary" id="uploadB">POTVRDI</button>
+                            <button type="submit" class="btn btn-primary" id="uploadB">SAVE</button>
                         </div>
                     </div>
                 </form>
 
             </div>
+            
+
             <div class="divEditAlbum">
-                <img src="/images/sliders/{{$data->photo}}" style="    width: 100%;
-" />
+                <img src="/images/sliders/{{$data->photo}}" style="    width: 100%;" />
+            </div>
+            <div class="col-4 form-group" style="margin: auto;padding-top:20px">
+                <form action="/admin/destroy_slider/{{$data->id}}" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                    <button type="submit" class="btn btnError">Delete</button>
+                </form>
             </div>
         </div>
     </div>

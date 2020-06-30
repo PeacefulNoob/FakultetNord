@@ -60,7 +60,7 @@
         </div>
     </div>
 </nav>
-<div class="myMain">
+<div class="myMain ">
 <h1>{{$tags->name}}</h1>
 <div class="row_articles m-5">
 

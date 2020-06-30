@@ -2,23 +2,22 @@
 
 @section('content')
 
-<div class="container text-white">
-    <div class="row">
-                        <div class="panel-heading"><h1>Dashboard</h1></div>
+<div class="container text-white ">
+    
 
-        <div class="col-md-8 col-md-offset-2 m-auto">
+        <div class="col-md-12 col-md-offset-2 m-auto">
             <div class="panel panel-default">
                 <div class="postMain">
 
                     <div class="panel-body">
-                        <a href="/posts/create" class="btn btn-primary">Create Post</a>
+                     
                         <h3 class="my-5">Your Blog Posts</h3>
                         @if(count($posts) > 0)
                             <table class="table table-striped">
                                 <tr>
                                     <th>Title</th>
-                                    <th></th>
-                                    <th></th>
+                                    <th> Option </th>
+                                    <th>Option</th>
                                 </tr>
                                 @foreach($posts as $post)
                                     <tr>
@@ -27,7 +26,7 @@
                                         </td>
                                         <td>
                                             {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'
-                                            => 'POST', 'class' => 'pull-right'])!!}
+                                            => 'POST', 'class' => ''])!!}
                                             {{ Form::hidden('_method', 'DELETE') }}
                                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                             {!!Form::close()!!}
@@ -38,7 +37,6 @@
                         @else
                             <p>You have no posts</p>
                         @endif
-                    </div>
                 </div>
             </div>
         </div>
