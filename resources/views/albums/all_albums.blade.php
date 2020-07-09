@@ -16,7 +16,7 @@
     <div class="allAlRow">
       @foreach($albums as $album)
 
-      <div class="card" style="width: 22rem;    margin: auto;">
+      <div class="card" style="width: 20rem;    margin: auto;">
         <a href="/admin/albums/edit_album/{{$album->id}}">
 
           <img class="card-img-top allAlimg" src="/images/cover_image/{{$album->cover_image}}" alt="Card image cap">

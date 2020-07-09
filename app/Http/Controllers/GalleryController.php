@@ -89,7 +89,7 @@ class GalleryController extends Controller
         //Create album
         $album = new Album;
         $album->name = $request->input('name');
-        $album->description = $description;
+        $album->description = $request->input('description');
         $album->cover_image = $filenameToStore;
         $album->logo_image = $filenameToStoreLogo;
 
