@@ -19,14 +19,14 @@ class TagController extends Controller
     public function show($id)
     {
         $tags = Tag::findOrFail($id);
-
-        return view('tags.show' , compact("tags", "tags"));
+        $albums = \App\Album::all();
+        return view('tags.show' , compact("tags", "albums"));
     }
     public function create()
     {
         $posts = DB::table('posts')->orderBy('created_at', 'desc')->get();
         $tags = DB::table('tags')->orderBy('id', 'desc')->get();
-
+  
 
         return view('tags.post_tag' , compact("posts", "tags"));
     }

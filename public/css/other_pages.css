@@ -4,7 +4,7 @@
 
     background-color: #3e3b3c;
     height: 75px;
-
+    position: relative !important;
 }
 
 .well {
@@ -41,5 +41,5 @@
 }
 
 .menu-wrap {
-    top: 6% !important;
+    top: 1% !important;
 }

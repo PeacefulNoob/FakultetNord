@@ -33,7 +33,8 @@ class PostsController extends Controller
         $posts = Post::all();
         $tags = Tag::all();
         $users = User::all();
-        return view('posts.index' , compact("posts", "tags","users"));
+        $albums = \App\Album::all();
+        return view('posts.index' , compact("posts", "tags","users","albums"));
     }
     /**
      * Show the form for creating a new resource.

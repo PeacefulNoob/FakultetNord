@@ -229,3 +229,12 @@ $(window).on("scroll", function (e) {
 
 
 ///////////////////////////////////////
+$(".projekti a").hover(
+    function () {
+        var imageUrl = $(this).attr('name');
+        $(".js_backgroundCover").css('background-image', 'url(' + imageUrl + ')');
+        $(".js_backgroundCover").css('opacity', '1');
+    },
+    function () {
+        $(".js_backgroundCover").css('opacity', '0.01');
+    });

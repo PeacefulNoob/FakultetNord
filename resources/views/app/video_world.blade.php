@@ -7,15 +7,12 @@
 @yield('video_world.css')
 <div class="site-wrap">
 
-    <div class="row h-25">
-
-    </div>
     <div class="jumbotron ">
         <div class="container">
-            <h1>Video World</h1>
+            <h1 class="text-black">Video World</h1>
             <hr class="my-4">
 
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+            <p class="text-black">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
         </div>
     </div>
 

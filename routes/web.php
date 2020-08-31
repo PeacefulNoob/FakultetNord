@@ -13,7 +13,8 @@
 
 
 Route::get('/about', function () {
-    return view('app.about');
+    $albums = \App\Album::all();
+    return view('app.about',compact("albums"));
 });
 
 Route::get('/contact', "ContactMessageController@create");

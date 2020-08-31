@@ -27,8 +27,8 @@ class PhotoController extends Controller
 
         $photos = DB::table('photos')->where('album_id', $id)->get();
         $album = Album::findOrFail($id);
-
-        return view('app.gallery_media', compact("photos", "album"));
+        $albums = \App\Album::all();
+        return view('app.gallery_media', compact("photos", "album","albums"));
     }
     public function upload()
     {

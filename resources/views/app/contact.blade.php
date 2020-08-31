@@ -7,7 +7,7 @@
 @include('emails.report_message')
 <div class="site-wrap" style="width:100%; padding-bottom:20px;" ;>
 
-    <main class="myMain">
+    <main class="myMain my-5">
         <div class="container-fluid">
             <div class="row justify-content-center">
 

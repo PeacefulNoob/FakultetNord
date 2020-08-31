@@ -67,8 +67,8 @@
 
 <div class="jumbotron ">
     <div class="container">
-      <h1 class="display-4">Blog</h1>
-      <p class="lead">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+      <h1 class="display-4 text-black">Blog</h1>
+      <p class="lead text-black">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
            Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, </p>
     </div>
   </div>
