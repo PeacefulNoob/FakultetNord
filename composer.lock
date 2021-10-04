@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "948b26517a0c4bd5fa3db2d42c821c64",
+    "content-hash": "58ba1a5fd017cec70928275e15f0b03f",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -127,48 +127,6 @@
                 "validation"
             ],
             "time": "2020-03-06T23:25:41+00:00"
-        },
-        {
-            "name": "ckeditor/ckeditor",
-            "version": "4.14.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ckeditor/ckeditor4-releases.git",
-                "reference": "998e43cd6305bca24304b9538a682da123ac5b73"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ckeditor/ckeditor4-releases/zipball/998e43cd6305bca24304b9538a682da123ac5b73",
-                "reference": "998e43cd6305bca24304b9538a682da123ac5b73",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+",
-                "LGPL-2.1+",
-                "MPL-1.1+"
-            ],
-            "authors": [
-                {
-                    "name": "CKSource",
-                    "homepage": "https://cksource.com"
-                }
-            ],
-            "description": "JavaScript WYSIWYG web text editor.",
-            "homepage": "https://ckeditor.com/ckeditor-4/",
-            "keywords": [
-                "CKEditor",
-                "ckeditor4",
-                "editor",
-                "fckeditor",
-                "html",
-                "javascript",
-                "richtext",
-                "text",
-                "wysiwyg"
-            ],
-            "time": "2020-03-04T13:19:40+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -717,23 +675,23 @@
         },
         {
             "name": "james-heinrich/getid3",
-            "version": "v1.9.19",
+            "version": "v1.9.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JamesHeinrich/getID3.git",
-                "reference": "c6fd499a690ae67eea2eec6b2edba5df13f60f6f"
+                "reference": "36f5dabb1325415a4b07a401113f8db2eb81eca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/c6fd499a690ae67eea2eec6b2edba5df13f60f6f",
-                "reference": "c6fd499a690ae67eea2eec6b2edba5df13f60f6f",
+                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/36f5dabb1325415a4b07a401113f8db2eb81eca1",
+                "reference": "36f5dabb1325415a4b07a401113f8db2eb81eca1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "jakub-onderka/php-parallel-lint": "^0.9 || ^1.0"
+                "php-parallel-lint/php-parallel-lint": "^1.0"
             },
             "suggest": {
                 "ext-SimpleXML": "SimpleXML extension is required to analyze RIFF/WAV/BWF audio files (also requires `ext-libxml`).",
@@ -776,7 +734,11 @@
                 "php",
                 "tags"
             ],
-            "time": "2019-12-17T21:17:26+00:00"
+            "support": {
+                "issues": "https://github.com/JamesHeinrich/getID3/issues",
+                "source": "https://github.com/JamesHeinrich/getID3/tree/v1.9.21"
+            },
+            "time": "2021-09-22T16:34:51+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5848,5 +5810,6 @@
     "platform": {
         "php": "^7.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
